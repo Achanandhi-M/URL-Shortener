@@ -108,5 +108,3 @@ To build and run the Docker container:
    ```bash
    docker run -p 8080:8080 url-shortener
    ```
-
->>>>>>> 41a97da (first-commit)
