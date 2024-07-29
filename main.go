@@ -14,7 +14,7 @@ func main() {
 
     http.HandleFunc("/shorten", handlers.ShortenURL)
     http.HandleFunc("/redirect/", handlers.RedirectURL)
-    http.HandleFunc("/topdomains", handlers.GetTopDomains)
+    http.HandleFunc("/metrics", handlers.GetTopDomains)
 
     log.Println("Server started at http://localhost:8080")
     log.Fatal(http.ListenAndServe(":8080", nil))
