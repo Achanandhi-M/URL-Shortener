@@ -4,6 +4,7 @@ import (
     "math/rand"
     "net/url"
     "strings"
+    "log"
     "time"
 )
 
@@ -24,6 +25,7 @@ func GenerateShortURL() string {
 func GetDomain(inputURL string) string {
     u, err := url.Parse(inputURL)
     if err != nil {
+        log.Printf("Error parsing URL %s: %v", inputURL, err)
         return ""
     }
     domain := strings.Split(u.Hostname(), ".")
